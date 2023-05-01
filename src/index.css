@@ -59,12 +59,12 @@ button:focus-visible {
 
 input {
   width: 180px;
-  height: 30px;
+  height: 45px;
   border: 1px solid rgb(185, 225, 238);
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 5px;
-  margin: 5px;
+  margin: 10px;
 }
 
 @media (prefers-color-scheme: light) {

@@ -3,7 +3,7 @@ import * as Tenji from 'tenji'
 import { useState } from "react"
 
 export default function App(): JSX.Element {
-  const sumiji : string[] = ["東大","五十歩百歩","百聞は一見にしかず","初期微動継続時間"];
+  const sumiji : string[] = ["一","二","三","四","五","六","七","八","九","十"];
   const [problem, setProblem] = useState(0);
   const [visible, setVisible] = useState(false);
   const [typedBrailleStrings, setTypedBrailleStrings] =
@@ -48,7 +48,7 @@ export default function App(): JSX.Element {
         setVisible(false);
       }}
       >再チャレンジ</button>
-      {problem <= 2 && <button 
+      {problem <= sumiji.length - 1 && <button 
       type="button"
       key={"answer"}
       onClick={() =>{
@@ -56,6 +56,14 @@ export default function App(): JSX.Element {
         setProblem(problem + 1);
       }}
       >次の問題へ</button>}
+      {problem >= 1 && <button 
+      type="button"
+      key={"answer"}
+      onClick={() =>{
+        setVisible(false);
+        setProblem(problem - 1);
+      }}
+      >前の問題に戻る</button>}
       </div>
     </>
   );
