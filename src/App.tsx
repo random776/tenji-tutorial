@@ -48,14 +48,6 @@ export default function App(): JSX.Element {
         setVisible(false);
       }}
       >再チャレンジ</button>
-      {problem <= sumiji.length - 2 && <button 
-      type="button"
-      key={"answer"}
-      onClick={() =>{
-        setVisible(false);
-        setProblem(problem + 1);
-      }}
-      >次の問題へ</button>}
       {problem >= 1 && <button 
       type="button"
       key={"answer"}
@@ -63,7 +55,15 @@ export default function App(): JSX.Element {
         setVisible(false);
         setProblem(problem - 1);
       }}
-      >前の問題に戻る</button>}
+      >** 前の問題に戻る</button>}
+      {problem <= sumiji.length - 2 && <button 
+      type="button"
+      key={"answer"}
+      onClick={() =>{
+        setVisible(false);
+        setProblem(problem + 1);
+      }}
+      >次の問題に進む **</button>}
       </div>
     </>
   );
