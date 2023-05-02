@@ -48,7 +48,7 @@ export default function App(): JSX.Element {
         setVisible(false);
       }}
       >再チャレンジ</button>
-      {problem <= 9 && <button 
+      {problem <= sumiji.length - 2 && <button 
       type="button"
       key={"answer"}
       onClick={() =>{
